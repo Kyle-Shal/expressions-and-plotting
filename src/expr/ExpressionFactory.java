@@ -55,32 +55,32 @@ public class ExpressionFactory implements ExpressionFactoryI {
 
 	@Override
 	public Expression cos(Expression a) {
-		// TODO Auto-generated method stub
-		return null;
+		Expression cos = new Cos(a);
+		return cos;
 	}
 
 	@Override
 	public Expression tan(Expression a) {
-		// TODO Auto-generated method stub
-		return null;
+		Expression tan = new Tan(a);
+		return tan;
 	}
 
 	@Override
 	public Expression ln(Expression a) {
-		// TODO Auto-generated method stub
-		return null;
+		Expression ln = new Ln(a);
+		return ln;
 	}
 
 	@Override
 	public Expression exp(Expression a) {
-		// TODO Auto-generated method stub
-		return null;
+		Expression exp = new Exp(a);
+		return exp;
 	}
 
 	@Override
 	public Expression parenthesized(Expression a) {
-		// TODO Auto-generated method stub
-		return null;
+		Expression par = new Parenthesize(a);
+		return par;
 	}
 
 }

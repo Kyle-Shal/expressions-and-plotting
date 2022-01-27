@@ -1,125 +1,89 @@
 /**
- * 
+ * Name: Kyle Shal
+ * Student Number: 201923810
+ * Email: kashal@mun.ca
  */
 package expr;
-
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
 
 import util.Assert;
 
 /**
  * TODO: use reasonable initial values in the constructor
- * TODO: call invariant at the end of the constructor
+ * TODO: call invariant at the end of the constructor and each mutator
  * 
  * @author kyles
  * 
  */
-public class ChartData {
-	private Expression a;
-	private double xMin;
-	private double xMax;
-	private double yMin;
-	private double yMax;
+public class ChartData implements ChartDataI {
+	protected Expression a;
+	protected double xMin;
+	protected double xMax;
+	protected double yMin;
+	protected double yMax;
 	
 	public ChartData() {
+		Expression x = new Constant(1) ;
 
+		this.a = x ;
+		this.xMin = -1;
+		this.xMax = 1;
+		this.yMin = -1;
+		this.xMax = 1;
 	}
 	
-	/** Class Invariants: <code>
-	 * Expression != null </code>
-	 * 
-	 * @param a Value of type Expression that cannot be null
-	 */
+	@Override
 	public void setExpression( Expression a ) {
-		Assert.check(a != null, "Cannot pass a null expression");
 		this.a = a;
+		
+		checkInvariant();
 	}
 	
 	public Expression getExpression( ) {		
 		return a;		
 	}
 	
-	/** Class Invariants: <code>
-	 * Double.NEGATIVE_INFINITY < xMin and 
-	 * xMax < Double.POSITIVE_INFINITY and
-	 * xMin < xMax </code>
-	 * 
-	 * @param xMin Value of type double to be used as lower boundary of X range
-	 * @param xMax Value of type double to be used as upper boundary of X range
-	 */
+	@Override
 	public void setXRange( double xMin, double xMax ) {
-		
-		Assert.check(Double.NEGATIVE_INFINITY < xMin, "xMin cannot be less than negative infinity");
-		Assert.check(xMax < Double.POSITIVE_INFINITY, "xMax cannot be greater than positive infinity");
-		Assert.check(xMin < xMax, "xMin cannot be greater that xMax");
-
 		this.xMin = xMin;
 		this.xMax = xMax;
+		
+		checkInvariant();
 	}
+	@Override
 	public double getXMin( ) {
 		return xMin;
 	}
+	@Override
 	public double getXMax( ) {
 		return xMax;
 	}
 	
-	/** Class Invariants: <code>
-	 * Double.NEGATIVE_INFINITY < yMin and 
-	 * yMax < Double.POSITIVE_INFINITY and
-	 * yMin < yMax </code>
-	 * 
-	 * @param yMin Value of type double to be used as lower boundary of Y range
-	 * @param yMax Value  of type double to be used as upper boundary of Y range
-	 */
+	@Override
 	public void setYRange( double yMin, double yMax ) {
-		Assert.check(Double.NEGATIVE_INFINITY < yMin, "xMin cannot be less than negative infinity");
-		Assert.check(yMax < Double.POSITIVE_INFINITY, "xMax cannot be greater than positive infinity");
-		Assert.check(yMin < yMax, "xMin cannot be greater that xMax");
-		
 		this.yMin = yMin;
-		this.yMax = yMax;		
+		this.yMax = yMax;	
+		checkInvariant();
 	}
+	@Override
 	public double getYMin( ) {
 		return yMin;
 	}
+	@Override
 	public double getYMax( ) {
 		return yMax;
 	}
-//	private void invariant() {
-//		Assert.check(a != null, "Cannot pass a null expression");
-//		
-//		Assert.check(Double.NEGATIVE_INFINITY < xMin, "xMin cannot be less than negative infinity");
-//		Assert.check(xMax < Double.POSITIVE_INFINITY, "xMax cannot be greater than positive infinity");
-//		Assert.check(xMin < xMax, "xMin cannot be greater that xMax");
-//		
-//		Assert.check(Double.NEGATIVE_INFINITY < yMin, "xMin cannot be less than negative infinity");
-//		Assert.check(yMax < Double.POSITIVE_INFINITY, "xMax cannot be greater than positive infinity");
-//		Assert.check(yMin < yMax, "xMin cannot be greater that xMax");
-//
-//		
-//	}
-	
-//	public void checkInvariant( ) {
-//		// It's not always the case that a class invariant can be
-//		// checked using only the public interface. Better to 
-//		// put checks into the mutators and constructors.
-//		// That also ensures that the
-//		// checking happens during system tests as well as
-//		// unit tests.
-//		assertNotNull( cd.getExpression() ) ;
-//		assertTrue( Double.NEGATIVE_INFINITY < cd.getXMin( ) ) ;
-//		assertTrue( cd.getXMin( ) < cd.getXMax( ) ) ;
-//		assertTrue( cd.getXMax( ) < Double.POSITIVE_INFINITY ) ;
-//		assertTrue( Double.NEGATIVE_INFINITY < cd.getYMin( ) ) ;
-//		assertTrue( cd.getYMin( ) < cd.getYMax( ) ) ;
-//		assertTrue( cd.getYMax( ) < Double.POSITIVE_INFINITY ) ;
-//	}
-
-
-
-
-
-
+	public void checkInvariant( ) {
+		
+		Assert.check(getExpression() != null, "Cannot pass a null expression");
+		
+		Assert.check(Double.NEGATIVE_INFINITY < getXMin( ), "xMin cannot be less than negative infinity");
+		Assert.check(getXMax( ) < Double.POSITIVE_INFINITY, "xMax cannot be greater than positive infinity");
+		Assert.check(getXMin( ) < getXMax( ), "xMin cannot be greater that xMax");
+		
+		Assert.check(Double.NEGATIVE_INFINITY < getYMin( ), "xMin cannot be less than negative infinity");
+		Assert.check(getYMax( ) < Double.POSITIVE_INFINITY, "xMax cannot be greater than positive infinity");
+		Assert.check(getYMin( ) < getYMax( ), "xMin cannot be greater that xMax");
+		
+	}
 
 }
