@@ -13,8 +13,8 @@ public class ExpressionFactory implements ExpressionFactoryI {
 
 	@Override
 	public Expression add(Expression a, Expression b) {
-		// TODO Auto-generated method stub
-		return null;
+		Expression sum = new Add(a,b);
+		return sum;
 	}
 
 	@Override
@@ -25,14 +25,14 @@ public class ExpressionFactory implements ExpressionFactoryI {
 
 	@Override
 	public Expression multiply(Expression a, Expression b) {
-		Expression multiply = new Multiply(a,b);
-		return multiply;
+		Expression product = new Multiply(a,b);
+		return product;
 	}
 
 	@Override
 	public Expression divide(Expression a, Expression b) {
-		// TODO Auto-generated method stub
-		return null;
+		Expression quotient = new Divide(a,b);
+		return quotient;
 	}
 
 	@Override
@@ -49,8 +49,8 @@ public class ExpressionFactory implements ExpressionFactoryI {
 
 	@Override
 	public Expression sin(Expression a) {
-		// TODO Auto-generated method stub
-		return null;
+		Expression sin = new Sin(a);
+		return sin;
 	}
 
 	@Override

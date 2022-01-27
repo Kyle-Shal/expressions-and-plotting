@@ -5,7 +5,7 @@
  */
 package expr;
 
-/**
+/**Creates an instance of an Expression that can hold a constant value.
  * @author kyles
  *
  */

@@ -5,7 +5,9 @@
  */
 package expr;
 
-/**
+/** An operation is a function which takes zero or more input values (called operands) to a well-defined output value.
+ * These are the current subclass operations:
+ * <p> add, subtract, multiply, divide, constant, x, sin, cos, tan, ln, exp, parenthesize
  * @author kyles
  *
  */

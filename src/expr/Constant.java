@@ -5,7 +5,7 @@
  */
 package expr;
 
-/** Holds a value of type double
+/** Creates an instance of an Expression that can hold a constant value of type double.
  * @author kyles
  *
  */

@@ -5,28 +5,27 @@
  */
 package expr;
 
-/**Creates an instance of an operation that can perform multiplication on two Expressions.
+/**Creates an instance of an operation that can perform division on two Expressions.
  * @author kyles
  *
  */
-public class Multiply extends Operation {
-	
+public class Divide extends Operation {
 	Expression a;
 	Expression b;
 	
-	public Multiply(Expression a, Expression b) {
+	public Divide(Expression a, Expression b) {
 		this.a = a;
 		this.b = b;
 	}
 
 	@Override
 	public double value(double x) {
-		return a.value(x) * b.value(x);
+		return a.value(x) / b.value(x);
 	}
 
 	@Override
 	public String toString() {
-		return a.toString() + "*" + b.toString();
+		return a.toString() + "/" + b.toString();
 	}
 
 }
