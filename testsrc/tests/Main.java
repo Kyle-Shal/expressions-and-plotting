@@ -14,15 +14,8 @@ public class Main {
 		double y = 1.0 ;
 		System.out.println( "The value of " +c+ " at " +y+
 				            " is " +c.value(y) ) ;
-		
-		Expression d = f.parenthesized( c) ;
-		
-		System.out.println( "This is d " +d);
 
 
-
-		
-		
 
 	}
 }

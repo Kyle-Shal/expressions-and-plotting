@@ -33,6 +33,7 @@ public class ChartData implements ChartDataI {
 	
 	@Override
 	public void setExpression( Expression a ) {
+        Assert.check(a != null, "Cannot pass a null expression");
 		this.a = a;
 		
 		checkInvariant();
@@ -44,6 +45,10 @@ public class ChartData implements ChartDataI {
 	
 	@Override
 	public void setXRange( double xMin, double xMax ) {
+		Assert.check(Double.NEGATIVE_INFINITY < xMin, "xMin cannot be less than negative infinity");
+        Assert.check(xMax < Double.POSITIVE_INFINITY, "xMax cannot be greater than positive infinity");
+        Assert.check(xMin < xMax, "xMin cannot be greater that xMax");
+        
 		this.xMin = xMin;
 		this.xMax = xMax;
 		
@@ -60,8 +65,13 @@ public class ChartData implements ChartDataI {
 	
 	@Override
 	public void setYRange( double yMin, double yMax ) {
+        Assert.check(Double.NEGATIVE_INFINITY < yMin, "xMin cannot be less than negative infinity");
+        Assert.check(yMax < Double.POSITIVE_INFINITY, "xMax cannot be greater than positive infinity");
+        Assert.check(yMin < yMax, "xMin cannot be greater that xMax");
+        
 		this.yMin = yMin;
-		this.yMax = yMax;	
+		this.yMax = yMax;
+		
 		checkInvariant();
 	}
 	@Override
@@ -83,7 +93,7 @@ public class ChartData implements ChartDataI {
 		Assert.check(Double.NEGATIVE_INFINITY < getYMin( ), "xMin cannot be less than negative infinity");
 		Assert.check(getYMax( ) < Double.POSITIVE_INFINITY, "xMax cannot be greater than positive infinity");
 		Assert.check(getYMin( ) < getYMax( ), "xMin cannot be greater that xMax");
-		
+        
 	}
 
 }

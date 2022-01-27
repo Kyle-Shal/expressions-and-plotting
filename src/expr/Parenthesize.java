@@ -5,7 +5,6 @@
  */
 package expr;
 
-import java.util.Iterator;
 
 /**
  * @author kyles
