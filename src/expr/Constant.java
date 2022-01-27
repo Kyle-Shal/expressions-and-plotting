@@ -9,8 +9,8 @@ package expr;
  * @author kyles
  *
  */
-public class Constant implements Expression{
-	double d;
+public final class Constant implements Expression{
+	private final double d;
 	
 	public Constant(double d) {
 		this.d = d;

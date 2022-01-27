@@ -9,10 +9,9 @@ package expr;
  * @author kyles
  *
  */
-public class Multiply extends Operation {
-	
-	Expression a;
-	Expression b;
+public final class Multiply extends Operation {
+	private final Expression a;
+	private final Expression b;
 	
 	public Multiply(Expression a, Expression b) {
 		this.a = a;

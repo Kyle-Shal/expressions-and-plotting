@@ -9,8 +9,7 @@ package expr;
  * @author kyles
  *
  */
-public class X extends Operation {
-	double x;
+public final class X extends Operation {
 	
 	public X() {
 		
@@ -18,7 +17,6 @@ public class X extends Operation {
 
 	@Override
 	public double value(double x) {
-		this.x = x;
 		return x;
 	}
 

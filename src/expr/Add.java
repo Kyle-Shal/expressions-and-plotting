@@ -7,9 +7,9 @@ package expr;
  * @author kyles
  *
  */
-public class Add extends Operation {
-	Expression a;
-	Expression b;
+public final class Add extends Operation {
+	private final Expression a;
+	private final Expression b;
 	
 	public Add(Expression a, Expression b) {
 		this.a = a;

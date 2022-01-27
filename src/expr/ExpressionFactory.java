@@ -19,8 +19,8 @@ public class ExpressionFactory implements ExpressionFactoryI {
 
 	@Override
 	public Expression subtract(Expression a, Expression b) {
-		// TODO Auto-generated method stub
-		return null;
+		Expression difference = new Subtract(a,b);
+		return difference;
 	}
 
 	@Override

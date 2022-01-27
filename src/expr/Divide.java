@@ -9,9 +9,9 @@ package expr;
  * @author kyles
  *
  */
-public class Divide extends Operation {
-	Expression a;
-	Expression b;
+public final class Divide extends Operation {
+	private final Expression a;
+	private final Expression b;
 	
 	public Divide(Expression a, Expression b) {
 		this.a = a;
