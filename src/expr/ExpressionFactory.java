@@ -5,7 +5,9 @@
  */
 package expr;
 
-/**
+/**A factory class for various types of Mathematical Expressions.
+ * <p>It can be used by the ChartData class, which will take care of 
+ * graphically plotting the Expressions created.
  * @author kyles
  *
  */

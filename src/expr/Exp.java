@@ -6,7 +6,7 @@
 package expr;
 
 /**Creates an instance of an exponential function that can calculate the 
- * value of e to the power of an Expression a.
+ * value of <code>e</code> to the power of an Expression a. <p><code>e</code> is the base of the natural logarithm
  * @author kyles
  *
  */

@@ -7,9 +7,7 @@ package expr;
 
 import util.Assert;
 
-/**
- * TODO: use reasonable initial values in the constructor
- * TODO: call invariant at the end of the constructor and each mutator
+/**Holds data pertaining to an mathematical Expression to be plotted on a chart.
  * 
  * @author kyles
  * 

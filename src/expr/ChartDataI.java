@@ -5,10 +5,7 @@
  */
 package expr;
 
-/**
- * TODO: use reasonable initial values in the constructor
- * TODO: call invariant at the end of the constructor and each mutator
- * 
+/**Standardizing the data set pertaining to an mathematical Expression to be plotted on a chart.
  * @author kyles
  * 
  */
