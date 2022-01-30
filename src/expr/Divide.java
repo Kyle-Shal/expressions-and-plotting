@@ -10,9 +10,15 @@ package expr;
  *
  */
 public final class Divide extends Operation {
+	/** The Expressions to be divided	 */
 	private final Expression a;
 	private final Expression b;
 	
+	/** Create an division function using two Expressions as operands 
+	 * 
+	 * @param a The first Expression.
+	 * @param b The second Expression.
+	 */
 	public Divide(Expression a, Expression b) {
 		this.a = a;
 		this.b = b;

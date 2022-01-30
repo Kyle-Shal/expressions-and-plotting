@@ -5,13 +5,19 @@
  */
 package expr;
 
-/**Creates an instance of an operation that can calculate the natural logarithm of a given value.
+/**Creates an instance of an operation that can calculate the natural logarithm of a given Expression.
  * @author kyles
  *
  */
 public final class Ln extends Operation {
+
+	/** The Expression to be evaluated involving natural logarithm	 */
 	private final Expression a;
 	
+	/** Create an natural logarithm function using an Expression as the operand
+	 * 
+	 * @param a The Expression.
+	 */
 	public Ln(Expression a) {
 		this.a = a;
 	}

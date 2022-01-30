@@ -10,7 +10,10 @@ package expr;
  *
  */
 public final class X extends Operation {
-	
+
+	/** Create an function that signifies the variable x
+	 * 
+	 */
 	public X() {
 		
 	}

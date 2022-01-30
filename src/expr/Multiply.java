@@ -10,9 +10,15 @@ package expr;
  *
  */
 public final class Multiply extends Operation {
+	/** The Expressions to be multiplied	 */
 	private final Expression a;
 	private final Expression b;
 	
+	/** Create an multiplication function using two Expressions as operands 
+	 * 
+	 * @param a The first Expression.
+	 * @param b The second Expression.
+	 */
 	public Multiply(Expression a, Expression b) {
 		this.a = a;
 		this.b = b;

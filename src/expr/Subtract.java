@@ -8,9 +8,15 @@ package expr;
  *
  */
 public final class Subtract extends Operation {
+	/** The Expressions to be subtracted */
 	private final Expression a;
 	private final Expression b;
 	
+	/** Create an subtraction function using two Expressions as operands 
+	 * 
+	 * @param a The first Expression.
+	 * @param b The second Expression.
+	 */
 	public Subtract (Expression a, Expression b){
 		this.a = a;
 		this.b = b;

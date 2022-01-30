@@ -13,12 +13,22 @@ import util.Assert;
  * 
  */
 public class ChartData implements ChartDataI {
+	
+	/** The Expression/function to be plotted	 */
 	protected Expression a;
+	
+	/** The lower and upper boundary for the x range */
 	protected double xMin;
 	protected double xMax;
+	
+	/** The lower and upper boundary for the y range */
 	protected double yMin;
 	protected double yMax;
 	
+	/** Create a data set pertaining to the graphical characteristics on an Expression. 
+	 * <p>Initialized to be the line y=1 with unit 1 boundaries
+	 * 
+	 */
 	public ChartData() {
 		Expression x = new Constant(1) ;
 
@@ -80,6 +90,14 @@ public class ChartData implements ChartDataI {
 	public double getYMax( ) {
 		return yMax;
 	}
+	
+	/** Checks to make sure all Invariant assertion tests are passed.
+	 * 
+	 * <p>If it is passed then the rest of the code executes after this method is called
+	 * 
+	 * <p>If one assertion proves false, code execution ends and assert message is printed
+	 * 
+\	 */
 	public void checkInvariant( ) {
 		
 		Assert.check(getExpression() != null, "Cannot pass a null expression");

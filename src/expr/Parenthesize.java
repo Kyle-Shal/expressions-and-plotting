@@ -11,8 +11,14 @@ package expr;
  *
  */
 public final class Parenthesize extends Operation {
+	
+	/** The Expression to be placed in parentheses*/
 	private final Expression a;
 	
+	/** Create an function that parenthesizes an Expression
+	 * 
+	 * @param a The Expression.
+	 */
 	public Parenthesize(Expression a) {
 		this.a = a;
 	}

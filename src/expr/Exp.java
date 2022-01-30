@@ -11,8 +11,14 @@ package expr;
  *
  */
 public final class Exp extends Operation {
+
+	/** The Expression to be evaluated involving exponentiation	 */
 	private final Expression a;
 	
+	/** Create an exponential function using an Expression as the operand
+	 * 
+	 * @param a The Expression.
+	 */
 	public Exp(Expression a) {
 		this.a = a;
 	}

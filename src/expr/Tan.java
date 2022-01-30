@@ -5,12 +5,19 @@
  */
 package expr;
 
-/**Creates an instance of an operation that can calculate the Tangent of a given value.
+/**Creates an instance of an operation that can calculate the Tangent of a given Expression.
  * @author kyles
  *
  */
 public final class Tan extends Operation {
+	
+	/** The Expression to be evaluated involving Tangent	 */
 	private final Expression a;
+	
+	/** Create an trigonometric tangent function using an Expression as the operand
+	 * 
+	 * @param a The Expression.
+	 */
 	
 	public Tan(Expression a){
 		this.a = a;

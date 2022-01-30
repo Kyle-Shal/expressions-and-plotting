@@ -11,16 +11,22 @@ package expr;
  */
 public interface ChartDataI {
 	
-	/** Class Invariants: <code>
+	/** Sets a new Expression to be used for Chart data
+	 * <p>Class Invariants: <code>
 	 * Expression != null </code>
 	 * 
 	 * @param a Value of type Expression that cannot be null
 	 */
 	public void setExpression( Expression a );
 	
+	/** Gets an Expression
+	 * 
+	 * @return The Expression
+	 */
 	public Expression getExpression( );
 	
-	/** Class Invariants: <code>
+	/** Sets a new upper and lower boundary for the x range of an Expression 
+	 * <p>Class Invariants: <code>
 	 * Double.NEGATIVE_INFINITY < xMin and 
 	 * xMax < Double.POSITIVE_INFINITY and
 	 * xMin < xMax </code>
@@ -29,10 +35,19 @@ public interface ChartDataI {
 	 * @param xMax Value of type double to be used as upper boundary of X range
 	 */
 	public void setXRange( double xMin, double xMax );
+	/** Gets the value of the lower bound of the x range
+	 * 
+	 * @return The xMinvalue
+	 */
 	public double getXMin( );
+	/** Gets the value of the upper bound of the x range
+	 * 
+	 * @return The xMax value
+	 */
 	public double getXMax( );
 	
-	/** Class Invariants: <code>
+	/**  Sets a new upper and lower boundary for the y range of an Expression
+	 * <p>Class Invariants: <code>
 	 * Double.NEGATIVE_INFINITY < yMin and 
 	 * yMax < Double.POSITIVE_INFINITY and
 	 * yMin < yMax </code>
@@ -41,7 +56,15 @@ public interface ChartDataI {
 	 * @param yMax Value  of type double to be used as upper boundary of Y range
 	 */
 	public void setYRange( double yMin, double yMax );
+	/** Gets the value of the lower bound of the y range for the Expression
+	 * 
+	 * @return The yMin value
+	 */
 	public double getYMin( );
+	/** Gets the value of the lower bound of the y range for the Expression
+	 * 
+	 * @return The yMax value
+	 */
 	public double getYMax( );
 
 

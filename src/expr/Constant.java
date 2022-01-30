@@ -10,8 +10,14 @@ package expr;
  *
  */
 public final class Constant implements Expression{
-	private final double d;
 	
+	/** The constant value*/
+	private final double d;
+
+	/** Create an function that holds a constant
+	 * 
+	 * @param d The constant's value.
+	 */
 	public Constant(double d) {
 		this.d = d;
 		

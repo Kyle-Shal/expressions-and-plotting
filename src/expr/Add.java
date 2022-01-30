@@ -10,9 +10,16 @@ package expr;
  *
  */
 public final class Add extends Operation {
+	
+	/** The Expressions to be added	 */
 	private final Expression a;
 	private final Expression b;
 	
+	/** Create an addition function using two Expressions as operands 
+	 * 
+	 * @param a The first Expression.
+	 * @param b The second Expression.
+	 */
 	public Add(Expression a, Expression b) {
 		this.a = a;
 		this.b = b;
