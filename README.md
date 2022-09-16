@@ -62,7 +62,7 @@ Simulation: ![Alt](/docs/assets/plotter.png "Plotter")
 ## ✍️ Authors <a name = "authors"></a>
 
 - Theodore Norvell - Idea, writing most of the classes and providing instructions to finish the project
-- [@kyle-shal](https://github.com/Kyle-Shal) - Implmeneted the expression classes used inside the plotter. 
+- [@kyle-shal](https://github.com/Kyle-Shal) - Implemented the expression classes used inside the plotter. 
 
 ## 🎉 Acknowledgements <a name = "acknowledgement"></a>
 
