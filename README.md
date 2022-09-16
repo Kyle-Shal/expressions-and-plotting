@@ -1,15 +1,11 @@
-<p align="center">
-  <a href="" rel="noopener">
- <img width=200px height=200px src="docs/assets/java-logo.png" alt="Project logo"></a>
-</p>
 
 <h3 align="center">Mathematical Expression Plotter in Java </h3>
 
 ---
 
-<p align="center"> This is the first assignment I did in term 5 of my Computer Engineering bachelors degree.
-    <br> This assignment uses object oriented programming concepts to build a expression plotter. 
-    <br> This assignemnt was for the course ECE 5010 Software Design. 
+<p align="center"> This is the first assignment I did in term 5 of my Computer Engineering undergrad degree.
+    <br> This assignment uses object oriented programming concepts to build a visual expression plotter. 
+    <br> Made for the course ECE 5010 Software Design. 
 </p>
 
 ## :thinking: Why Use it? 
